@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+body {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+h1{
+    display: flex;
+    justify-content: center;
+}
+/* ----- estilos para todos los dados ------ */
+
+section { /* todos los dados al centro */
+    display: flex;
+    justify-content: center; 
+}
+
+[class^="dado-"] { /* alt+94/altgr+{ selecciona a todos los atributos que comiencen en cara-xxx */
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    margin: 1em;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+} 
+.punto{
+    width: 20px;
+    height: 20px;
+    background: black;
+    border-radius: 50%;
+}
+/* ----- primer dado ------ */
+.dado-1 {
+    justify-content: center; /* centramos el mundo en el eje principal */
+    align-items: center; /* centramos el punto en el eje secundario */
+}
+/* ----- segundo dado ------ */
+.dado-2 {
+    justify-content: space-between; /*puntos a cada extremo */
+}
+.dado-2 .punto:nth-child(2) {
+    align-self: flex-end; /* segundo punto al final del eje secundario */
+}
+/* ----- tercer dado ------ */
+.dado-3 {
+    justify-content: space-between;
+}
+.dado-3 .punto:nth-child(2){
+    align-self: center; /* segundo punto al centro del eje secundario */
+}
+.dado-3 .punto:nth-child(3) {
+    align-self: flex-end;
+}
+/* ----- cuarto dado ------ */
+.dado-4 {
+    justify-content: space-between;
+}
+.dado-4 .columna {
+    display: flex;
+    flex-direction: column; /* cambiamos la dirección del eje principal: ahora eje principal es el vertical */
+    justify-content: space-between; /* cada flex-item a un extremo */  
+}
+/* ----- quinto dado ------ */
+.dado-5 {
+    justify-content: space-between;
+}
+.dado-5 .columna {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+}
+.dado-5 .punto:nth-child(2) {
+    align-self: center;
+}
+/* ----- sexto dado ------ */
+.dado-6 {
+    justify-content: space-between;
+}
+.dado-6 .columna {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;    
+}
